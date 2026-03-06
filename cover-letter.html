@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Letter | Blessing Baidoo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Cover Letter specific styles */
+        body {
+            background: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: transparent;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color .4s;
+        }
+
+        nav.scrolled {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        nav .back-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        nav .back-link:hover {
+            color: #005580;
+        }
+
+        .cover-letter-wrapper {
+            max-width: 900px;
+            margin: 120px auto 50px;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .cover-letter-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), #00ff88);
+            border-radius: 15px 15px 0 0;
+        }
+
+        .cover-letter-header {
+            text-align: left;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .header-info h1 {
+            color: var(--primary-color);
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header-info p {
+            color: #666666;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .contact-info {
+            text-align: right;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .contact-info i {
+            color: var(--primary-color);
+            width: 20px;
+        }
+
+        .cover-letter-body {
+            line-height: 1.8;
+            color: #333333;
+            font-size: 16px;
+        }
+
+        .cover-letter-body p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .cover-letter-body .greeting {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .cover-letter-body .closing {
+            margin-top: 40px;
+        }
+
+        .signature {
+            margin-top: 50px;
+            text-align: left;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 20px;
+        }
+
+        .signature p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        .signature .name {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #0088cc;
+        }
+
+        @media (max-width: 768px) {
+            .cover-letter-wrapper {
+                margin: 100px 20px 50px;
+                padding: 30px;
+            }
+
+            .cover-letter-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            nav {
+                padding: 15px 5%;
+            }
+        }
+
+        @media print {
+            nav {
+                display: none;
+            }
+
+            .cover-letter-wrapper {
+                margin: 0;
+                box-shadow: none;
+                border: none;
+                background: white;
+                color: black;
+            }
+
+            .cover-letter-wrapper::before {
+                display: none;
+            }
+
+            .download-btn {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>MellyTech</h1>
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+    </nav>
+
+    <div class="cover-letter-wrapper">
+        <div class="cover-letter-header">
+            <div class="header-info">
+                <h1>Blessing Baidoo</h1>
+                <p>Software Engineer</p>
+                <p>March 6, 2026</p>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> baidoob7525@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (233) 531-688-968</p>
+                <p><i class="fas fa-map-marker-alt"></i> Kumasi, Ghana</p>
+                <p><i class="fab fa-github"></i> https://github.com/Mellytech</p>
+            </div>
+        </div>
+
+        <div class="cover-letter-body">
+            <p class="greeting"><strong>Hiring Manager,</strong></p>
+
+            <p>I am writing to express my interest in the Software Engineer position, as advertised. With a Diploma in Software Engineering and ongoing studies in Information Technology at Kwame Nkrumah University of Science and Technology, I bring a solid foundation in full-stack development and a passion for creating efficient, user-centric web applications.</p>
+
+            <p>My expertise lies in PHP, JavaScript, and SQL, where I have developed robust backend solutions and dynamic front-end interfaces. I am particularly skilled in optimizing databases for scalability and performance, ensuring that applications not only function well but also deliver exceptional user experiences. My recent projects, including freelance work, demonstrate my ability to tackle complex challenges and deliver high-quality code using modern tools like VS Code and GitHub.</p>
+
+            <p>What excites me most about this opportunity is the chance to contribute to innovative projects. I am eager to collaborate with your team to build solutions that make a real impact. I am confident that my problem-solving skills, attention to detail, and commitment to continuous learning will allow me to add value to your organization from day one.</p>
+
+            <p class="closing">I would welcome the opportunity to discuss how my background and skills align with your needs. Thank you for considering my application. I look forward to the possibility of contributing to your team.</p>
+
+            <div class="signature">
+                <p>Sincerely,</p>
+                <p class="name">Blessing Baidoo</p>
+            </div>
+
+            <a href="#" class="download-btn" onclick="window.print()">
+                <i class="fas fa-download"></i> Download as PDF
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

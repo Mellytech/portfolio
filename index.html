@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blessing | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+    /* Hero button hover effects */
+    .hero .btn:not(.btn-outline):hover {
+        background: transparent;
+        color: var(--primary-color);
+    }
+
+    .hero .btn.btn-outline:hover {
+        background: var(--primary-color);
+        color: #fff;
+    }
+</style>
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<nav>
+    <h1>MellyTech</h1>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <div class="menu-icon" id="menu-icon" role="button" tabindex="0" aria-label="Main Menu" aria-controls="nav-menu" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+    </div>
+    <ul id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h2>Hello, I'm <span>Blessing Baidoo</span></h2>
+        <h2 id="typing-text"></h2>
+        <p>I specialize in building dynamic, responsive, and user-friendly web applications from front to back. I leverage my expertise in HTML, CSS, and JavaScript to create engaging user interfaces, while using PHP and MySQL to power robust and scalable backend solutions.</p>
+        <button class="btn" onclick="scrollToSection('contact')">Hire Me</button>
+        <a href="resume.html" class="btn btn-outline">View Resume</a>
+        <a href="cover-letter.html" class="btn btn-outline">View Cover Letter</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="pic.jpeg" alt="profile">
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="about-text">
+        I am a dedicated and results-driven Software Engineer with a strong foundation in software development principles and a passion for creating elegant, user-centric solutions. My journey into tech began in 2024 with a Diploma in Software Engineering, where I quickly developed a fascination for the intricate dance between backend logic and database efficiency. After completing my diploma in 2026, I am now furthering my academic and practical knowledge by pursuing a Bachelor of Science in Information Technology at the prestigious Kwame Nkrumah University of Science and Technology (KNUST).
+        <br><br>
+        My technical expertise is centered around full-stack development, with a particular strength in PHP, JavaScript, and SQL for building robust, data-driven web applications. I believe that a well-designed database is the backbone of any great application, and I am passionate about optimizing data structures to ensure speed, scalability, and reliability. My development process is grounded in modern best practices, utilizing tools like VS Code for precision coding and GitHub for collaborative version control to produce clean, maintainable, and high-quality code.
+        <br><br>
+        Beyond the technical skills, I am a natural problem-solver who thrives on dissecting complex challenges and engineering effective solutions. I see coding as a tool to build bridges between user needs and technical possibilities. As I continue my studies and take on new freelance projects, my goal is to not only build functional software but to create digital experiences that are intuitive, efficient, and impactful. I am always eager to learn, collaborate with fellow developers, and contribute meaningfully to the ever-evolving world of technology.
+    </p>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-container">
+        <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>PHP</p>
+                    <p>90%</p>
+                </div>
+                <div class="bar">
+                    <span style="--w:90%"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>JavaScript</p>
+                    <p>85%</p>
+                </div>
+                <div class="bar">
+                    <span style="--w:85%"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>MySQL / SQL</p>
+                    <p>95%</p>
+                </div>
+                <div class="bar">
+                    <span style="--w:95%"></span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>Core Competencies</h3>
+            <div class="skill-tags">
+                <span>Web Development</span> <span>Database Management</span> <span>Backend Logic</span> <span>API Integration</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h3>Tools & Platforms</h3>
+            <div class="skill-tags">
+                <span>GitHub</span> <span>VS Code</span> <span>Git</span> <span>XAMPP</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Freelance Software Engineer</h3>
+            <span class="company">Self-Employed | 2025 - Present</span>
+            <p>I design and develop dynamic, high-performance web applications for local clients, specializing in custom PHP and MySQL solutions. My role involves the full development lifecycle—from gathering requirements and designing efficient database schemas to writing clean, maintainable code. I focus on optimizing database queries for speed and reliability while implementing responsive front-end interfaces that meet modern web standards.</p>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="education-container">
+        <div class="education-card">
+            <h3>BSc Information Technology</h3>
+            <p>KNUST | 2026 - Present</p>
+        </div>
+        <div class="education-card">
+            <h3>Diploma in Software Engineering</h3>
+            <p>2024 - 2026</p>
+        </div>
+    </div>
+</section>
+
+  <section id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-container">
+        <div class="project-card" role="button" tabindex="0" data-details="A responsive real estate platform for users to browse property listings, view property details with image galleries, and contact agents. Includes features like advanced search and filtering, and an interactive map view.">
+            <h3>Real Estate Website</h3>
+            <p>A responsive platform for browsing and searching real estate property listings.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <p class="role"><strong>Role:</strong> Frontend Developer</p>
+            <div class="project-links">
+                <a href=" https://mellytech.github.io/real-estate/">Live Demo</a>
+                <a href="https://github.com/Mellytech">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card" role="button" tabindex="0" data-details="A comprehensive hostel booking system allowing students to view available rooms, book accommodations, and make payments. Administrators can manage hostel listings and booking requests. Built with PHP and MySQL for robust data handling.">
+            <h3>Hostel Booking Site <span class="badge-pending">Pending</span></h3>
+            <p>A platform for students to book hostels online.</p>
+            <p class="tech-stack"><strong>Tech:</strong> PHP, MySQL, JavaScript</p>
+            <p class="role"><strong>Role:</strong> Full-Stack Developer</p>
+            <div class="project-links">
+                <a href="#">Live Demo</a>
+            <a href="https://github.com/Mellytech">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card" role="button" tabindex="0" data-details="A stylish and responsive website for a local barber shop featuring a gallery of cuts, pricing services, and an integrated appointment booking form. Designed with a focus on modern aesthetics and user experience.">
+            <h3>Barbering Shop Website <span class="badge-pending">Pending</span></h3>
+            <p>A modern website for a local barber shop with appointment scheduling.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <p class="role"><strong>Role:</strong> Frontend Developer</p>
+            <div class="project-links">
+                <a href="#">Live Demo</a>
+                <a href="https://github.com/Mellytech">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card" role="button" tabindex="0" data-details="Collection of tools for developers, such as a code formatter, minifier, and base64 encoder/decoder.">
+            <h3>Develop Tools Website</h3>
+            <p>A collection of developer tools.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <p class="role"><strong>Role:</strong> Frontend Developer</p>
+            <div class="project-links">
+                <a href=" https://mellytech.github.io/developer/">Live Demo</a>
+                <a href="https://github.com/Mellytech">GitHub</a>
+            </div>
+        </div>
+
+
+         <div class="project-card" role="button" tabindex="0" data-details="[Shop Description Here]">
+            <h3>Sneaker Shop</h3>
+            <p>E-commerce platform specializing in sneakers.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <p class="role"><strong>Role:</strong> Frontend Developer</p>
+             <div class="project-links">
+                <a href="https://mellytech.github.io/sneakstore/">Live Demo</a>
+                <a href="https://github.com/Mellytech">GitHub</a>
+            </div>
+        </div>
+
+
+
+
+        <div class="project-card" role="button" tabindex="0" data-details="A dynamic weather application that fetches real-time weather data using a public API. Users can search for cities to view current temperature, humidity, and forecast details. Features a clean UI with dynamic background changes based on weather conditions.">
+            <h3>Weather Website</h3>
+            <p>A real-time weather forecasting application.</p>
+            <p class="tech-stack"><strong>Tech:</strong> JavaScript, API, CSS</p>
+            <p class="role"><strong>Role:</strong> Frontend Developer</p>
+            <div class="project-links">
+                <a href="https://mellytech.github.io/weather/">Live Demo</a>
+                <a href="https://github.com/Mellytech">GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <form id="contact-form">
+        <input type="text" name="user_name" placeholder="Your Name" required>
+        <input type="email" name="user_email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button class="btn" type="submit">
+            <span class="btn-text">Send</span>
+            <i class="fas fa-spinner fa-spin btn-spinner"></i>
+        </button>
+    </form>
+    <div id="success-message" class="success-message">Message sent successfully!</div>
+    <div class="social-icons">
+    <a href="https://wa.me/233531688968" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://github.com/Mellytech" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/blessing-baidoo-06274b333?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+</div>
+</section>
+<footer>
+ &copy; <span id="year"></span> Blessing | All Rights Reserved
+</footer>
+
+<button id="backToTop" class="btn-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Project Modal -->
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <p id="modal-tech"></p>
+            <div id="modal-links" class="project-links"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

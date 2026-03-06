@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Blessing Baidoo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Re-using some base styles from styles.css but overriding for resume page */
+        body {
+            background: #ffffff;
+            color: #333333;
+        }
+
+        .resume-wrapper {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+        }
+        .resume-header {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        .header-text h1 {
+            color: var(--primary-color, #00aaff);
+            font-size: 32px;
+            margin-bottom: 5px;
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        .header-text h2 {
+            font-size: 18px;
+            color: #666666;
+            font-weight: normal;
+            font-size: 16px;
+            color: #333333;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            background: rgba(255,255,255,0.05);
+            padding: 5px 15px;
+            border-radius: 4px;
+            border: 1px solid #333;
+        }
+
+        .resume-left {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            height: fit-content;
+        }
+
+        .contact-info {
+            text-align: left;
+            font-size: 14px;
+            color: #666666;
+        }
+        .contact-info i {
+            color: var(--primary-color, #00aaff);
+            width: 20px;
+            text-align: center;
+            margin-right: 5px;
+        }
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .resume-section {
+            margin-bottom: 40px;
+        }
+        .resume-section h3 {
+            color: var(--primary-color, #00aaff);
+            font-size: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .resume-item {
+            margin-bottom: 25px;
+        }
+        .resume-item h4 {
+            font-size: 18px;
+            font-size: 20px;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+        .resume-item .meta {
+            color: var(--primary-color, #00aaff);
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 500;
+        }
+        .resume-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .resume-item ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: #666666;
+            font-size: 15px;
+        }
+        .resume-item ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color, #00aaff);
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .skill-tag {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            padding: 8px 10px;
+            text-align: center;
+            border-radius: 5px;
+            color: #333333;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .skill-tag:hover {
+            border-color: var(--primary-color, #00aaff);
+            background: rgba(0, 170, 255, 0.1);
+            color: #005580;
+        }
+        .action-buttons {
+            text-align: center;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Overriding button colors for this page */
+        .btn {
+            background: var(--primary-color, #00aaff);
+            border-color: var(--primary-color, #00aaff);
+        }
+        .btn-outline {
+            background: transparent;
+            border-color: var(--primary-color, #00aaff);
+            color: var(--primary-color, #00aaff);
+        }
+
+        /* Timeline Effect for Main Content (Experience) */
+        .resume-right .resume-item {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .resume-right .resume-item:last-child {
+            border-left: 2px solid transparent;
+        }
+        .resume-right .resume-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary-color, #00aaff);
+            box-shadow: 0 0 10px var(--primary-color, #00aaff);
+        }
+        
+        @media (max-width: 768px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+            .resume-header { text-align: center; }
+            .resume-left { order: 1; }
+            .contact-info {
+                text-align: center;
+            }
+            .resume-wrapper {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+
+        @media print {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+            .resume-left { background: none; padding: 0; }
+            body { background: white; color: black; }
+            .resume-wrapper { 
+                box-shadow: none; 
+                margin: 0; 
+                width: 100%; 
+                border: none; 
+                padding: 0; 
+                max-width: 100%;
+            }
+            .btn, .back-btn-container { display: none; }
+            .header-text h1 { color: black; }
+            .header-text h2 { color: #333; }
+            .resume-section h3 { color: black; border-bottom: 2px solid #000; }
+            .resume-item h4 { color: black; }
+            .resume-item .meta { color: #444; font-weight: bold; }
+            .resume-item ul li { color: black; }
+            .resume-item ul li::before { color: black; }
+            .skill-tag { border: 1px solid #000; color: black; background: none; }
+            .contact-info, .contact-info p { color: black; }
+            .contact-info i { color: black; }
+            a { text-decoration: none; color: black; }
+            .resume-right .resume-item { border-left: none; padding-left: 0; }
+            .resume-right .resume-item::before { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-btn-container" style="padding: 20px 8%;">
+        <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    </div>
+
+    <div class="resume-wrapper">
+        <header class="resume-header">
+            <div class="header-profile">
+                <div class="header-text">
+                    <h1>Blessing Baidoo</h1>
+                    <h2>Software Engineer</h2>
+                </div><br>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> baidoob7525@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +233 53 168 8968</p>
+                <p><i class="fas fa-map-marker-alt"></i> Kumasi, Ghana</p>
+                <p><i class="fab fa-linkedin"></i> www.linkedin.com/in/blessing-baidoo-06274b333</p>
+            </div>
+        </header>
+
+        <section class="resume-section">
+            <h3>Professional Summary</h3>
+            <p style="color: #000; line-height: 1.6;">
+                I am a dedicated and results-driven Software Engineer with a strong foundation in software development principles, having recently completed a Diploma in Software Engineering in 2026. Currently, I am furthering my academic journey by pursuing a Bachelor of Science in Information Technology at the Kwame Nkrumah University of Science and Technology (KNUST). My technical expertise lies in full-stack development with a specialized focus on backend architecture, where I leverage PHP and MySQL to build robust, scalable, and secure web applications.
+                <br><br>
+                Beyond just writing code, I am passionate about creating seamless user experiences through dynamic JavaScript interfaces and efficient database management. I am proficient in modern development workflows, utilizing tools like VS Code for precision coding and GitHub for version control and team collaboration. My approach to engineering is rooted in problem-solving; I thrive on dissecting complex technical challenges and delivering elegant, user-centric solutions. As a lifelong learner, I am constantly exploring new technologies and methodologies to stay ahead in the rapidly evolving tech landscape.
+            </p>
+        </section>
+
+        <section class="resume-section">
+            <h3>Experience</h3>
+            
+            <div class="resume-item">
+                <h4>Freelance Software Engineer</h4>
+                <span class="meta">Self-Employed | 2025 - Present</span>
+                <ul>
+                    <li>Developing dynamic web applications for clients using PHP and MySQL.</li>
+                    <li>Designing and optimizing database schemas for efficient data retrieval.</li>
+                    <li>Implementing responsive user interfaces using JavaScript and CSS.</li>
+                    <li>Managing version control and project collaboration using GitHub.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h3>Education</h3>
+            <div class="resume-item">
+                <h4>BSc Information Technology</h4>
+                <span class="meta">KNUST | 2026 - Present</span>
+            </div>
+            <div class="resume-item">
+                <h4>Diploma in Software Engineering</h4>
+                <span class="meta">2024 - 2026</span>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-tag">PHP</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">MySQL</div>
+                <div class="skill-tag">SQL</div>
+                <div class="skill-tag">HTML5 & CSS3</div>
+                <div class="skill-tag">GitHub</div>
+                <div class="skill-tag">VS Code</div>
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <button class="btn" onclick="window.print()">Download PDF</button>
+        </div>
+    </div>
+
+</body>
+</html>
