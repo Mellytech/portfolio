@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Typing Effect
     const typingElement = document.getElementById("typing-text");
-    const phrases = ["Full-Stack Developer", "Problem Solver"];
+    const phrases = ["Software Engineer", "Full-Stack Developer", "Problem Solver"];
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -323,4 +323,5 @@ document.addEventListener("DOMContentLoaded", function() {
             setTheme('blue');
         }
     });
+
 });
